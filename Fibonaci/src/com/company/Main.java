@@ -12,18 +12,19 @@ public class Main {
         if (n == 0) {
             System.out.println("0");
         } else if (n == 1) {
+            System.out.println("Output :");
             System.out.println(" 1");
         } else {
-            System.out.println("Output :");
-            System.out.print(" 1 ");
-            int a = 0;
-            int b = 1;
-            for (int i = 1; i < n; i++) {
-                int nextNumber = a + b;
-                System.out.print(nextNumber + " ");
-                a = b;
-                b = nextNumber;
+            int sum = 2;
+            int fibo1 = 1, fibo2 = 1, fibonacci = 1;
+            for (int i = 3; i <= n; i++) {
+                fibonacci = fibo1 + fibo2;
+                sum += fibonacci;
+                fibo1 = fibo2;
+                fibo2 = fibonacci;
             }
+            System.out.println("Output: ");
+            System.out.println(sum);
         }
     }
 }
